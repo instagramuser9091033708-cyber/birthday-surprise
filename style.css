@@ -1,85 +1,71 @@
 body {
   margin:0;
-  font-family: Arial;
+  font-family:sans-serif;
   text-align:center;
-  background:#0f0f0f;
+  background: linear-gradient(135deg,#ff9a9e,#fad0c4);
   color:white;
 }
 
-/* Pages */
-.page { display:none; padding:40px; }
-.active { display:block; }
+.page {
+  display:none;
+  min-height:100vh;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+.active {
+  display:flex;
+}
 
 button {
   padding:12px 20px;
   margin:10px;
-  font-size:16px;
   border:none;
-  border-radius:10px;
-  background:pink;
-  cursor:pointer;
-}
-
-/* Glow Name */
-.nameGlow {
-  animation: glow 1s infinite alternate;
-}
-@keyframes glow {
-  from {color:white;}
-  to {color:pink;}
+  border-radius:20px;
+  background:#ff4da6;
+  color:white;
+  font-size:18px;
 }
 
 /* Cake */
-.cake { font-size:80px; }
-
-.flame {
-  display:none;
-  font-size:40px;
-  animation: flicker 0.2s infinite alternate;
-}
-@keyframes flicker {
-  from {opacity:0.5;}
-  to {opacity:1;}
+.cake {
+  width:150px;
+  height:100px;
+  background:pink;
+  border-radius:10px;
+  margin:20px auto;
+  position:relative;
 }
 
-/* Flags */
-.flags {
-  display:none;
-  font-size:30px;
-  animation: swing 1s infinite alternate;
-}
-@keyframes swing {
-  from {transform: rotate(-5deg);}
-  to {transform: rotate(5deg);}
+.candle {
+  width:10px;
+  height:30px;
+  background:white;
+  position:absolute;
+  top:-30px;
+  left:70px;
 }
 
-/* Confetti */
-.confetti {
-  position:fixed;
+.candle::after {
+  content:'';
   width:10px;
   height:10px;
-  top:0;
-  animation: fall 3s linear infinite;
-}
-@keyframes fall {
-  to {transform: translateY(100vh);}
+  background:orange;
+  border-radius:50%;
+  position:absolute;
+  top:-10px;
+  left:0;
+  display:none;
 }
 
 /* Balloons */
 .balloon {
-  font-size:30px;
+  width:80px;
+  height:100px;
+  background:red;
+  border-radius:50%;
+  display:inline-block;
   margin:10px;
-  cursor:pointer;
-}
-
-/* Slideshow */
-.slideshow img {
-  width:200px;
-  margin:10px;
-  border-radius:15px;
-}
-
-/* Calligraphy */
-.calligraphy {
-  font-family:cursive;
+  line-height:100px;
 }
