@@ -15,36 +15,35 @@ body {
 }
 .active { display:flex; }
 
-/* Button */
 button {
   padding:12px 25px;
   margin:10px;
   border:none;
-  border-radius:30px;
+  border-radius:25px;
   background:white;
   color:#ff4da6;
   font-size:18px;
 }
 
-/* CAKE */
+/* Cake */
 .cake {
   position:relative;
-  width:150px;
+  width:160px;
   margin:30px auto;
 }
 .layer {
-  width:150px;
+  width:160px;
   height:60px;
   background:#ffb6c1;
   border-radius:10px;
 }
 .icing {
-  width:150px;
+  width:160px;
   height:20px;
   background:white;
-  border-radius:10px;
   position:absolute;
   top:-10px;
+  border-radius:10px;
 }
 
 /* Candle */
@@ -54,10 +53,10 @@ button {
   background:white;
   position:absolute;
   top:-40px;
-  left:70px;
+  left:75px;
 }
 
-/* REAL FLAME */
+/* Flame */
 .flame {
   width:10px;
   height:20px;
@@ -65,31 +64,45 @@ button {
   border-radius:50%;
   position:absolute;
   top:-20px;
-  animation:flicker 0.2s infinite alternate;
   display:none;
+  animation:flicker 0.2s infinite alternate;
 }
 @keyframes flicker {
   from {transform:scale(1);}
-  to {transform:scale(1.2);}
+  to {transform:scale(1.3);}
 }
 
-/* FLAGS */
+/* Flags */
 .bunting {
   display:none;
-  width:100%;
-  height:50px;
   position:absolute;
   top:0;
-  background: repeating-linear-gradient(
-    45deg,
-    red 0 10px,
-    yellow 10px 20px,
-    blue 20px 30px
-  );
+  width:100%;
+  height:60px;
+  background:
+  linear-gradient(45deg, red 25%, transparent 25%) -10px 0,
+  linear-gradient(-45deg, blue 25%, transparent 25%) -10px 0,
+  linear-gradient(45deg, yellow 25%, transparent 25%),
+  linear-gradient(-45deg, green 25%, transparent 25%);
+  background-size:20px 20px;
 }
 
-/* TEXT */
-#balloonText {
-  margin-top:20px;
-  font-size:24px;
+/* Balloons */
+.balloon {
+  width:60px;
+  height:80px;
+  border-radius:50%;
+  margin:10px;
+  display:inline-block;
+  position:relative;
+  cursor:pointer;
+}
+.balloon::after {
+  content:"";
+  width:2px;
+  height:30px;
+  background:white;
+  position:absolute;
+  bottom:-30px;
+  left:50%;
 }
