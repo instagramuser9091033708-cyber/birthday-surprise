@@ -8,7 +8,6 @@ function nextPage(n){
   document.getElementById("page"+n).classList.add("active");
 }
 
-// start music
 function start(){
   document.getElementById("music").play();
   nextPage(4);
@@ -31,13 +30,27 @@ function lightCandle(){
   document.getElementById("flame").style.display="block";
 }
 
-// BALLOON MESSAGE LOGIC
-let messages = ["You","are","a","cutie"];
-let index = 0;
+// Balloon logic (MAIN FIX)
+let words = ["You","are","a","cutie"];
+let i = 0;
 
-function showBalloons(){
-  if(index < messages.length){
-    document.getElementById("balloonText").innerText = messages[index];
-    index++;
+function createBalloons(){
+  let box = document.getElementById("balloonBox");
+  box.innerHTML = "";
+
+  for(let j=0;j<4;j++){
+    let b = document.createElement("div");
+    b.className = "balloon";
+    b.style.background = ["red","blue","green","purple"][j];
+
+    b.onclick = function(){
+      if(i < words.length){
+        document.getElementById("message").innerText += " " + words[i];
+        i++;
+      }
+      b.remove();
+    };
+
+    box.appendChild(b);
   }
 }
