@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Birthday Surprise 🎉</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bgMusic" src="music.mp3"></audio>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+  <h2>Loading your birthday wishes... 🎁</h2>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+  <h2 class="typing">A cutie pie born on 🎂</h2>
+  <p id="birthText"></p>
+  <p id="ageText"></p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+  <h2>Start the Surprise 🎉</h2>
+  <button onclick="startMusic(); nextPage()">Start</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="page4">
+
+  <h1 class="nameGlow">Happy Birthday 💖</h1>
+
+  <div class="flags" id="flags">🎉🎊🎉🎊🎉</div>
+
+  <div class="cake">🎂</div>
+  <div class="flame" id="flame">🔥</div>
+
+  <button onclick="decorate()">Decorate</button>
+  <button onclick="lightCandle()">Light the Candle</button>
+  <button onclick="showBalloons()">Pop the Balloons</button>
+  <button onclick="openMessage()">Open my message</button>
+
+  <div id="balloons"></div>
+
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="page5">
+  <h1 class="calligraphy">✨ Happy Birthday 🎂 ✨</h1>
+  <div class="slideshow">
+    <img src="images/photo1.jpg">
+    <img src="images/photo2.jpg">
+    <img src="images/photo3.jpg">
+  </div>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page" id="page6">
+  <h2>Wish you a lot of love as friends ❤️</h2>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
