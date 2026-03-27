@@ -27,82 +27,88 @@ button {
 
 /* Cake */
 .cake {
-  position:relative;
-  width:160px;
-  margin:30px auto;
+  position: relative;
+  width: 200px;
+  margin: 50px auto;
 }
-.layer {
-  width:160px;
-  height:60px;
-  background:#ffb6c1;
-  border-radius:10px;
+
+.layer1 {
+  width: 200px;
+  height: 80px;
+  background: #c084fc;
+  border-radius: 20px;
 }
+
+.layer2 {
+  width: 150px;
+  height: 70px;
+  background: #93c5fd;
+  border-radius: 20px;
+  position: absolute;
+  top: -60px;
+  left: 25px;
+}
+
 .icing {
-  width:160px;
-  height:20px;
-  background:white;
-  position:absolute;
-  top:-10px;
-  border-radius:10px;
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  background: white;
+  top: 0;
+  border-radius: 15px;
 }
 
 /* Candle */
 .candle {
-  width:10px;
-  height:30px;
-  background:white;
-  position:absolute;
-  top:-40px;
-  left:75px;
+  width: 8px;
+  height: 35px;
+  background: linear-gradient(white, pink);
+  position: absolute;
+  top: -90px;
 }
 
 /* Flame */
 .flame {
-  width:10px;
-  height:20px;
-  background:orange;
-  border-radius:50%;
-  position:absolute;
-  top:-20px;
-  display:none;
-  animation:flicker 0.2s infinite alternate;
-}
-@keyframes flicker {
-  from {transform:scale(1);}
-  to {transform:scale(1.3);}
+  width: 10px;
+  height: 18px;
+  background: radial-gradient(circle, yellow, orange);
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  left: -1px;
+  opacity: 0;
+  animation: flicker 0.2s infinite alternate;
+  box-shadow: 0 0 10px orange, 0 0 20px yellow;
 }
 
-/* Flags */
-.bunting {
-  display:none;
-  position:absolute;
-  top:0;
-  width:100%;
-  height:60px;
-  background:
-  linear-gradient(45deg, red 25%, transparent 25%) -10px 0,
-  linear-gradient(-45deg, blue 25%, transparent 25%) -10px 0,
-  linear-gradient(45deg, yellow 25%, transparent 25%),
-  linear-gradient(-45deg, green 25%, transparent 25%);
-  background-size:20px 20px;
+@keyframes flicker {
+  from {transform: scale(1);}
+  to {transform: scale(1.3);}
 }
 
 /* Balloons */
 .balloon {
-  width:60px;
-  height:80px;
-  border-radius:50%;
-  margin:10px;
-  display:inline-block;
-  position:relative;
-  cursor:pointer;
+  width: 60px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+  animation: float 4s ease-in-out infinite;
 }
-.balloon::after {
-  content:"";
-  width:2px;
-  height:30px;
-  background:white;
-  position:absolute;
-  bottom:-30px;
-  left:50%;
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
+  100% { transform: translateY(0); }
+}
+
+/* Confetti */
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
