@@ -9,59 +9,44 @@
 
 <body>
 
-<audio id="music" src="music.mp3"></audio>
+<audio id="music" src="music/music.mp3"></audio>
 
-<!-- PAGE 1 -->
+<!-- PAGE -->
 <div class="page active" id="page1">
-  <h1>Loading your birthday wishes... 🎁</h1>
+  <h1 class="fade">Loading Surprise 🎁</h1>
 </div>
 
-<!-- PAGE 2 -->
 <div class="page" id="page2">
-  <h2>A cutie pie born on 🎂</h2>
+  <h2>Someone special born on 🎂</h2>
   <h1 id="birth"></h1>
   <h2 id="age"></h2>
   <button onclick="nextPage(3)">Next</button>
 </div>
 
-<!-- PAGE 3 -->
 <div class="page" id="page3">
-  <h1>Start the Surprise 🎉</h1>
+  <h1>Ready for Surprise? 😍</h1>
   <button onclick="start()">Start</button>
 </div>
 
-<!-- PAGE 4 -->
 <div class="page" id="page4">
 
-  <!-- 🎂 CAKE IMAGE -->
+  <!-- 🎂 Cake -->
   <div class="cake-container">
     <img src="images/cake.png" class="cake-img">
-
-    <!-- candle -->
-    <div class="candle" style="left:90px; top:20px;">
-      <div class="flame"></div>
-    </div>
+    <div class="flame"></div>
   </div>
 
   <button onclick="lightCandle()">Light Candle 🔥</button>
-  <button onclick="createBalloons()">Pop Balloons 🎈</button>
+  <button onclick="createBalloons()">Balloons 🎈</button>
 
   <div id="balloonBox"></div>
   <h2 id="message"></h2>
 
   <button onclick="nextPage(5)">Next</button>
-
 </div>
 
-<!-- PAGE 5 -->
 <div class="page" id="page5">
-  <h1>✨ Happy Birthday 🎂 ✨</h1>
-  <button onclick="nextPage(6)">Next</button>
-</div>
-
-<!-- PAGE 6 -->
-<div class="page" id="page6">
-  <h2>Wish you a lot of love ❤️</h2>
+  <h1 class="glow">✨ Happy Birthday 🎂 ✨</h1>
 </div>
 
 <script src="script.js"></script>
